@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    tools:context=".CheckBattery">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/guidTopCheckBan"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/guidTopCheckBan2"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/guidLeftCheckBan"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/guidRightCheckBan"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotob"
+        android:text="Checksheet Ban"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/guidTopCheckBan"
+        app:layout_constraintStart_toEndOf="@id/guidLeftCheckBan"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotob"
+        android:text="NAMA MOBIL"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guidTopCheckBan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/nama_mobil"
+        />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.8"
+        app:layout_constraintStart_toEndOf="@id/guidLeftCheckBan"
+        app:layout_constraintEnd_toStartOf="@id/guidRightCheckBan"
+        app:layout_constraintTop_toBottomOf="@id/guidTopCheckBan2"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoregular"
+                android:text="Depan Kanan"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@id/guidTopCheckBan2"
+                app:layout_constraintStart_toEndOf="@id/guidLeftCheckBan"
+                android:layout_marginBottom="10dp"
+                />
+
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TableRow
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fisik Ban"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/white"
+                        android:background="@drawable/radius_table"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Baik"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        android:id="@+id/FisikBaikDepanKanan"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rusak"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        android:id="@+id/FisikRusakDepanKanan"
+                        />
+
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ketebalan"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/white"
+                        android:background="@drawable/radius_table"
+                        />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:hint="......"
+                        android:textAlignment="center"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        android:id="@+id/ketebalanDepanKanan"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cm"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Status Ketebalan"
+                        android:textSize="15sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/white"
+                        android:background="@drawable/radius_table"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Baik"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        android:id="@+id/baikTebalDepanKanan"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rusak"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        android:id="@+id/rusakTebalDepanKanan"
+                        />
+
+                </TableRow>
+
+
+
+            </TableLayout>
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="45dp"
+                android:backgroundTint="@color/white"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="UPLOAD"
+                android:fontFamily="@font/robotoregular"
+                android:textColor="#333131"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:id="@+id/uploadDepanKanan"
+                />
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_launcher_background"
+                android:padding="8dp"
+                android:id="@+id/imageDepanKanan"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoregular"
+                android:text="Depan Kiri"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@id/guidTopCheckBan2"
+                app:layout_constraintStart_toEndOf="@id/guidLeftCheckBan"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                />
+
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TableRow
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fisik Ban"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/white"
+                        android:background="@drawable/radius_table"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Baik"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        android:id="@+id/FisikBaikDepanKiri"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rusak"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        android:id="@+id/FisikRusakDepanKiri"
+                        />
+
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ketebalan"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/white"
+                        android:background="@drawable/radius_table"
+                        />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:hint="......"
+                        android:textAlignment="center"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        android:id="@+id/ketebalanDepanKiri"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cm"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Status Ketebalan"
+                        android:textSize="15sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/white"
+                        android:background="@drawable/radius_table"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Baik"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        android:id="@+id/baikTebalDepanKiri"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rusak"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        android:id="@+id/rusakTebalDepanKiri"
+                        />
+
+                </TableRow>
+
+
+
+            </TableLayout>
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="45dp"
+                android:backgroundTint="@color/white"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="UPLOAD"
+                android:fontFamily="@font/robotoregular"
+                android:textColor="#333131"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:id="@+id/uploadDepanKiri"
+                />
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_launcher_background"
+                android:id="@+id/imageDepanKiri"
+                android:padding="8dp"
+                android:background="@drawable/radius_white"
+                android:layout_marginBottom="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoregular"
+                android:text="Belakang Kanan"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@id/guidTopCheckBan2"
+                app:layout_constraintStart_toEndOf="@id/guidLeftCheckBan"
+                android:layout_marginBottom="10dp"
+                />
+
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TableRow
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fisik Ban"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/white"
+                        android:background="@drawable/radius_table"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Baik"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        android:id="@+id/FisikBaikBelakangKanan"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rusak"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        android:id="@+id/FisikRusakBelakangKanan"
+                        />
+
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ketebalan"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/white"
+                        android:background="@drawable/radius_table"
+                        />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:hint="......"
+                        android:textAlignment="center"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        android:id="@+id/ketebalanBelakangKanan"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cm"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Status Ketebalan"
+                        android:textSize="15sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/white"
+                        android:background="@drawable/radius_table"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Baik"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        android:id="@+id/baikTebalBelakangKanan"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rusak"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        android:id="@+id/rusakTebalBelakangKanan"
+                        />
+
+                </TableRow>
+
+
+
+            </TableLayout>
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="45dp"
+                android:backgroundTint="@color/white"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="UPLOAD"
+                android:fontFamily="@font/robotoregular"
+                android:textColor="#333131"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:id="@+id/uploadBelakangKanan"
+                />
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_launcher_background"
+                android:padding="8dp"
+                android:background="@drawable/radius_white"
+                android:id="@+id/imageBelakangKanan"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoregular"
+                android:text="Belakang Kiri"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@id/guidTopCheckBan2"
+                app:layout_constraintStart_toEndOf="@id/guidLeftCheckBan"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                />
+
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TableRow
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fisik Ban"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/white"
+                        android:background="@drawable/radius_table"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Baik"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        android:id="@+id/FisikBaikBelakangKiri"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rusak"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        android:id="@+id/FisikRusakBelakangKiri"
+                        />
+
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ketebalan"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/white"
+                        android:background="@drawable/radius_table"
+                        />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:hint="......"
+                        android:textAlignment="center"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        android:id="@+id/ketebalanBelakangKiri"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cm"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Status Ketebalan"
+                        android:textSize="15sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/white"
+                        android:background="@drawable/radius_table"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Baik"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        android:id="@+id/baikTebalBelakangKiri"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rusak"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radius_keputusan"
+                        android:id="@+id/rusakTebalBelakangKiri"
+                        />
+
+                </TableRow>
+
+
+
+            </TableLayout>
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="45dp"
+                android:backgroundTint="@color/white"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="UPLOAD"
+                android:fontFamily="@font/robotoregular"
+                android:textColor="#333131"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_launcher_background"
+                android:padding="8dp"
+                android:background="@drawable/radius_white"
+                android:layout_marginBottom="10dp"
+                />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

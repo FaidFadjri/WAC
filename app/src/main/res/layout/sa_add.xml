@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    tools:context=".SaAdd">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2"
+        android:id="@+id/guidTopAdd"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3"
+        android:id="@+id/guidTopAdd2"
+        />
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:src="@drawable/logodark"
+        app:layout_constraintBottom_toTopOf="@id/guidTopAdd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="35dp"
+        />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidTopAdd2"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PILIH TANGGAL"
+                android:padding="8dp"
+                android:fontFamily="@font/robotoregular"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:id="@+id/pick_tanggal"
+                android:background="@drawable/ripple_menu"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Tanggal"
+                android:fontFamily="@font/robotoregular"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/display_tanggal"
+                android:visibility="gone"
+                />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:entries="@array/tipe_mobil"
+                android:background="@drawable/radius_white"
+                android:padding="15dp"
+                android:id="@+id/spinner_kendaraan"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tipe Kendaraan"
+                android:paddingLeft="8dp"
+                android:background="@drawable/radius_white"
+                android:fontFamily="@font/robotoregular"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:inputType="textCapWords"
+                android:id="@+id/tipe_car_column"
+                android:visibility="gone"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nomor Polisi"
+                android:paddingLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/radius_white"
+                android:fontFamily="@font/robotoregular"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:inputType="textCapCharacters"
+                android:id="@+id/nopol_car_column"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TAMBAH"
+                android:padding="8dp"
+                android:fontFamily="@font/robotoregular"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ripple_menu"
+                android:id="@+id/add_button"
+                />
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:id="@+id/progress_add"
+                android:visibility="gone"
+                />
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

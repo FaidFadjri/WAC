@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="role_user">
+        <item>SA</item>
+        <item>MRA</item>
+        <item>Teknisi</item>
+    </string-array>
+    <string-array name="tipe_mobil">
+        <item>Agya</item>
+        <item>Alphard</item>
+        <item>Avanza</item>
+        <item>Cayla</item>
+        <item>Camry</item>
+        <item>C-HR</item>
+        <item>Corolla</item>
+        <item>Crown</item>
+        <item>Dyna</item>
+        <item>Etios</item>
+        <item>Fortuner</item>
+        <item>FT-86</item>
+        <item>HiAce</item>
+        <item>Hilux</item>
+        <item>Innova</item>
+        <item>Land Cruiser</item>
+        <item>Limo</item>
+        <item>NAV1</item>
+        <item>Rush</item>
+        <item>Sienta</item>
+        <item>Supra</item>
+        <item>Transmover</item>
+        <item>Vellfire</item>
+        <item>Vios</item>
+        <item>Voxy</item>
+        <item>Yaris</item>
+        <item>Lainnya</item>
+    </string-array>
+</resources>

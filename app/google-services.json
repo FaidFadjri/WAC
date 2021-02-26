@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "247625618435",
+    "project_id": "walkaroundcheck-5eb14",
+    "storage_bucket": "walkaroundcheck-5eb14.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:247625618435:android:ed2963e9496fe879786a36",
+        "android_client_info": {
+          "package_name": "com.example.wac"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "247625618435-1o6e5n1krecftocusc6147okoo72hggc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKvtIIUwA0XhuTtNlm0fk_0R9tYc6kdHg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "247625618435-1o6e5n1krecftocusc6147okoo72hggc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

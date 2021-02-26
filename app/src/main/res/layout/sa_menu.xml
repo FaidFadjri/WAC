@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SaMenu">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/guidTopMenu"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/guidTopMenu2"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/guidBottomMenu"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/guidRightMenu"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/guidLeftMenu"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05"
+        />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintHeight_percent="0.25"
+        android:background="@drawable/ripple_menu"
+        app:layout_constraintTop_toBottomOf="@id/guidTopMenu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_list"
+        android:elevation="3dp"
+        android:id="@+id/nav_move"
+        />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintHeight_percent="0.25"
+        android:background="@drawable/ripple_menu"
+        app:layout_constraintTop_toBottomOf="@id/guidTopMenu2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_add"
+        android:elevation="3dp"
+        android:id="@+id/add_menu"
+        />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintEnd_toEndOf="@id/guidRightMenu"
+        app:layout_constraintTop_toBottomOf="@id/guidBottomMenu"
+        android:id="@+id/logout_button"
+        android:text="KELUAR"
+        android:fontFamily="@font/robotoregular"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:background="@drawable/ripple_menu"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotob"
+        android:textSize="20sp"
+        android:text="username"
+        app:layout_constraintStart_toEndOf="@id/guidLeftMenu"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:id="@+id/username_sa"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
+        android:textSize="15sp"
+        android:text="from Akastra Toyota"
+        app:layout_constraintStart_toEndOf="@id/guidLeftMenu"
+        app:layout_constraintTop_toBottomOf="@id/username_sa"
+        android:layout_marginTop="2dp"
+        android:textStyle="italic"
+        />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
